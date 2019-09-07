@@ -2,7 +2,6 @@
 #include "Driver.h"
 #include <vector>
 
-// Error occurred when it placed on header files
 // Current available drivers 
 std::vector<std::unique_ptr<Driver>>drivers;
 
@@ -18,7 +17,6 @@ void addNewDriver()
 	std::cout << "Please insert the information below:\n";
 	std::cout << "====================================\n";
 	std::cout << "Name\t\t: ";
-	std::cin.ignore();
 	std::getline(std::cin, name);
 	std::cout << "Destination\t: ";
 	std::getline(std::cin, destination);
@@ -42,4 +40,22 @@ void addNewDriver()
 	std::cin >> minutes;
 	drivers[drivers.size() - 1]->setTimeArrive(hours, minutes);
 	std::cout << "====================================\n";
+}
+
+void showAvailableBus()
+{
+	std::cout << "=========================\n";
+	std::cout << "      Available Bus      \n";
+	std::cout << "=========================\n";
+
+	for (size_t i = 0; i < drivers.size(); i++)
+	{
+		std::cout << "====================================\n";
+		// Print driver
+		drivers[i]->printDriverInfo();
+
+		// Print available seat 
+		// Currently are not available
+		std::cout << "====================================\n";
+	}
 }

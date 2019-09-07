@@ -24,7 +24,7 @@ int main()
 		main();
 		break;
 	case 2:
-		// Show available bus
+		showAvailableBus();
 		main();
 		break;
 	case 3:

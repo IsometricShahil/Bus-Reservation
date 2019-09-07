@@ -12,12 +12,12 @@ void Driver::setTimeArrive(int hours = 0, int minutes = 0)
 	this->timeArrive = std::to_string(hours) + ":" + std::to_string(minutes);
 }
 
-void Driver::printTimeDepart()
+void Driver::printDriverInfo()
 {
-	std::cout << this->timeDepart << std::endl;
+	std::cout << "Name\t\t: " << this->name << "\n";
+	std::cout << "Destination\t: " << this->destination << "\n";
+	std::cout << "Arrival\t\t: " << this->timeArrive << "\n";
+	std::cout << "From\t\t: " << this->from << "\n";
+	std::cout << "Departure\t: " << this->timeDepart << "\n";
 }
 
-void Driver::printTimeArrive()
-{
-	std::cout << this->timeArrive << std::endl;
-}
