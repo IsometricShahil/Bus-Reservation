@@ -16,7 +16,7 @@ void addNewBus()
 
 	std::cout << "Please insert the information below:\n";
 	std::cout << "====================================\n";
-	std::cout << "Name\t\t: ";
+	std::cout << "Driver name\t\t: ";
 	std::getline(std::cin, name);
 	std::cout << "Destination\t: ";
 	std::getline(std::cin, destination);
@@ -45,7 +45,7 @@ void addNewBus()
 void showAvailableBus()
 {
 	std::cout << "=========================\n";
-	std::cout << "      Available Bus      \n";
+	std::cout << "      Available Buses    \n";
 	std::cout << "=========================\n";
 
 	for (size_t i = 0; i < buses.size(); i++)
