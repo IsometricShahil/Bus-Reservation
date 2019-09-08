@@ -1,11 +1,11 @@
 #include "DataProvider.h"
-#include "Driver.h"
+#include "Bus.h"
 #include <vector>
 
 // Current available drivers 
-std::vector<std::unique_ptr<Driver>>drivers;
+std::vector<std::unique_ptr<Bus>>buses;
 
-void addNewDriver()
+void addNewBus()
 {
 	std::cout << "=========================\n";
 	std::cout << "    Add New Schedule     \n";
@@ -16,14 +16,14 @@ void addNewDriver()
 
 	std::cout << "Please insert the information below:\n";
 	std::cout << "====================================\n";
-	std::cout << "Name\t\t: ";
+	std::cout << "Driver name\t\t: ";
 	std::getline(std::cin, name);
 	std::cout << "Destination\t: ";
 	std::getline(std::cin, destination);
 	std::cout << "From\t\t: ";
 	std::getline(std::cin, from);
 
-	drivers.emplace_back(std::unique_ptr<Driver>(new Driver(name, destination, from)));
+	buses.emplace_back(std::unique_ptr<Bus>(new Bus(name, destination, from)));
 
 	std::cout << "Time Departure\n";
 	std::cout << "- Hours\t\t: ";
@@ -31,28 +31,28 @@ void addNewDriver()
 	std::cout << "- Minutes\t: ";
 	std::cin >> minutes;
 
-	drivers[drivers.size() - 1]->setTimeDepart(hours, minutes);
+	buses[buses.size() - 1]->setTimeDepart(hours, minutes);
 
 	std::cout << "Time Arrival\n";
 	std::cout << "- Hours\t\t: ";
 	std::cin >> hours;
 	std::cout << "- Minutes\t: ";
 	std::cin >> minutes;
-	drivers[drivers.size() - 1]->setTimeArrive(hours, minutes);
+	buses[buses.size() - 1]->setTimeArrive(hours, minutes);
 	std::cout << "====================================\n";
 }
 
 void showAvailableBus()
 {
 	std::cout << "=========================\n";
-	std::cout << "      Available Bus      \n";
+	std::cout << "      Available Buses    \n";
 	std::cout << "=========================\n";
 
-	for (size_t i = 0; i < drivers.size(); i++)
+	for (size_t i = 0; i < buses.size(); i++)
 	{
 		std::cout << "====================================\n";
 		// Print driver
-		drivers[i]->printDriverInfo();
+		buses[i]->printBusInfo();
 
 		// Print available seat 
 		// Currently are not available

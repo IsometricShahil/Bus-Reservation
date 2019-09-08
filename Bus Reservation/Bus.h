@@ -1,23 +1,22 @@
 #pragma once
 #include <string>
 
-class Driver
+class Bus
 {
-	std::string name;
+	std::string driverName;
 	std::string destination;
 	std::string from;
 	std::string timeDepart;
 	std::string timeArrive;
-
 public:
-	Driver(std::string name, std::string des = "", std::string from = "")
-		: name(name), destination(des), from(from) {}
+	Bus(std::string drivername, std::string des = "", std::string from = "")
+		: driverName(drivername), destination(des), from(from) {}
 
 	void setTimeDepart(int hours, int minutes);
 
 	void setTimeArrive(int hours, int minutes);
 
-	void printDriverInfo();
+	void printBusInfo();
 
 	// using 2d array for available seat
 	void printAvailableSeat();
