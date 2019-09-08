@@ -1,5 +1,5 @@
 #include "DataProvider.h"
-#include "Driver.h"
+#include "Bus.h"
 #include <iostream>
 
 int main()
@@ -20,7 +20,7 @@ int main()
 	switch (choice)
 	{
 	case 1:
-		addNewDriver();
+		addNewBus();
 		main();
 		break;
 	case 2:
