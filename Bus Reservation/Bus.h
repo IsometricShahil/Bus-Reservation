@@ -8,7 +8,6 @@ class Bus
 	std::string from;
 	std::string timeDepart;
 	std::string timeArrive;
-   std::string 
 public:
 	Bus(std::string drivername, std::string des = "", std::string from = "")
 		: driverName(drivername), destination(des), from(from) {}
