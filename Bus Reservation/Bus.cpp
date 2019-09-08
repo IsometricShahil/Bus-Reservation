@@ -14,7 +14,7 @@ void Bus::setTimeArrive(int hours = 0, int minutes = 0)
 
 void Bus::printBusInfo()
 {
-	std::cout << "Name\t\t: " << this->name << "\n";
+	std::cout << "Name\t\t: " << this->driverName << "\n";
 	std::cout << "Destination\t: " << this->destination << "\n";
 	std::cout << "Arrival\t\t: " << this->timeArrive << "\n";
 	std::cout << "From\t\t: " << this->from << "\n";
