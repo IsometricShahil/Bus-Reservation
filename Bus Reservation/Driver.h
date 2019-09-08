@@ -1,17 +1,17 @@
 #pragma once
 #include <string>
 
-class Driver
+class Bus
 {
-	std::string name;
+	std::string driverName;
 	std::string destination;
 	std::string from;
 	std::string timeDepart;
 	std::string timeArrive;
-
+   std::string 
 public:
-	Driver(std::string name, std::string des = "", std::string from = "")
-		: name(name), destination(des), from(from) {}
+	Bus(std::string drivername, std::string des = "", std::string from = "")
+		: driverName(drivername), destination(des), from(from) {}
 
 	void setTimeDepart(int hours, int minutes);
 
