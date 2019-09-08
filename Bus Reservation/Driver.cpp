@@ -1,18 +1,18 @@
-#include "Driver.h"
+#include "Bus.h"
 #include <iostream>
 #include <string>
 
-void Driver::setTimeDepart(int hours = 0, int minutes = 0)
+void Bus::setTimeDepart(int hours = 0, int minutes = 0)
 {
 	this->timeDepart = std::to_string(hours) + ":" + std::to_string(minutes);
 }
 
-void Driver::setTimeArrive(int hours = 0, int minutes = 0)
+void Bus::setTimeArrive(int hours = 0, int minutes = 0)
 {
 	this->timeArrive = std::to_string(hours) + ":" + std::to_string(minutes);
 }
 
-void Driver::printDriverInfo()
+void Bus::printDriverInfo()
 {
 	std::cout << "Name\t\t: " << this->name << "\n";
 	std::cout << "Destination\t: " << this->destination << "\n";
