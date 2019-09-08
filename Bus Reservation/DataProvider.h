@@ -2,6 +2,6 @@
 #include <iostream>
 #include <vector>
 
-void addNewDriver();
+void addNewBus();
 
 void showAvailableBus();
