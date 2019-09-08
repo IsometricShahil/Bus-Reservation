@@ -17,7 +17,7 @@ public:
 
 	void setTimeArrive(int hours, int minutes);
 
-	void printDriverInfo();
+	void printBusInfo();
 
 	// using 2d array for available seat
 	void printAvailableSeat();
