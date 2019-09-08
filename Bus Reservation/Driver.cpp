@@ -12,7 +12,7 @@ void Bus::setTimeArrive(int hours = 0, int minutes = 0)
 	this->timeArrive = std::to_string(hours) + ":" + std::to_string(minutes);
 }
 
-void Bus::printDriverInfo()
+void Bus::printBusInfo()
 {
 	std::cout << "Name\t\t: " << this->name << "\n";
 	std::cout << "Destination\t: " << this->destination << "\n";
@@ -20,4 +20,3 @@ void Bus::printDriverInfo()
 	std::cout << "From\t\t: " << this->from << "\n";
 	std::cout << "Departure\t: " << this->timeDepart << "\n";
 }
-
