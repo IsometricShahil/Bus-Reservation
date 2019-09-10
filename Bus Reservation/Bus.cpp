@@ -4,20 +4,28 @@
 
 void Bus::setTimeDepart(string hours = "00", string minutes = "00")
 {
-if (hours.length() == 1)
-{
-hours = "0"+hours;
-}
-if (minutes.length() == 1)
-{
-minutes = "0"+minutes;
-}
-	this->timeDepart = std::to_string(hours) + ":" + std::to_string(minutes);
+	if (hours.length() == 1)
+	{
+		hours = "0" + hours;
+	}
+	if (minutes.length() == 1)
+	{
+		minutes = "0" + minutes;
+	}
+	this->timeDepart = hours + ":" + minutes;
 }
 
 void Bus::setTimeArrive(string hours = "00", string minutes = "00")
 {
-	this->timeArrive = std::to_string(hours) + ":" + std::to_string(minutes);
+	if (hours.length() == 1)
+	{
+		hours = "0" + hours;
+	}
+	if (minutes.length() == 1)
+	{
+		minutes = "0" + minutes;
+	}
+	this->timeArrive = hours + ":" + minutes;
 }
 
 void Bus::printBusInfo()
