@@ -12,9 +12,9 @@ public:
 	Bus(std::string drivername, std::string des = "", std::string from = "")
 		: driverName(drivername), destination(des), from(from) {}
 
-	void setTimeDepart(int hours, int minutes);
+	void setTimeDepart(string hours, string minutes);
 
-	void setTimeArrive(int hours, int minutes);
+	void setTimeArrive(string hours, string minutes);
 
 	void printBusInfo();
 
