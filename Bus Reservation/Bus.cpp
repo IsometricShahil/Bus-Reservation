@@ -36,3 +36,4 @@ void Bus::printBusInfo()
 	std::cout << "From\t\t: " << this->from << "\n";
 	std::cout << "Departure\t: " << this->timeDepart << "\n";
 }
+
