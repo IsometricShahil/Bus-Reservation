@@ -4,11 +4,10 @@
 
 void Bus::setTimeDepart(string hours = "00", string minutes = "00")
 {
-
 	this->timeDepart = std::to_string(hours) + ":" + std::to_string(minutes);
 }
 
-- void Bus::setTimeArrive(string hours = "00", string minutes = "00")
+void Bus::setTimeArrive(string hours = "00", string minutes = "00")
 {
 	this->timeArrive = std::to_string(hours) + ":" + std::to_string(minutes);
 }
