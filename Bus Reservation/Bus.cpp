@@ -2,12 +2,13 @@
 #include <iostream>
 #include <string>
 
-void Bus::setTimeDepart(int hours = 0, int minutes = 0)
+void Bus::setTimeDepart(string hours = "00", string minutes = "00")
 {
+
 	this->timeDepart = std::to_string(hours) + ":" + std::to_string(minutes);
 }
 
-void Bus::setTimeArrive(int hours = 0, int minutes = 0)
+- void Bus::setTimeArrive(string hours = "00", string minutes = "00")
 {
 	this->timeArrive = std::to_string(hours) + ":" + std::to_string(minutes);
 }
