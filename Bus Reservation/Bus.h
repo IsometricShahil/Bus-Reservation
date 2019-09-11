@@ -8,6 +8,8 @@ class Bus
 	std::string from;
 	std::string timeDepart;
 	std::string timeArrive;
+   std::string seats[40]; //5 blocks * 2 rows = 10 total blocks
+
 public:
 	Bus(std::string drivername, std::string des = "", std::string from = "")
 		: driverName(drivername), destination(des), from(from) {}
@@ -18,6 +20,5 @@ public:
 
 	void printBusInfo();
 
-	// using 2d array for available seat
 	void printAvailableSeat();
 };
