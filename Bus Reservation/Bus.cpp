@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-void Bus::setTimeDepart(string hours = "00", string minutes = "00")
+void Bus::setTimeDepart(std::string hours = "00", std::string minutes = "00")
 {
 	if (hours.length() == 1)
 	{
@@ -15,7 +15,7 @@ void Bus::setTimeDepart(string hours = "00", string minutes = "00")
 	this->timeDepart = hours + ":" + minutes;
 }
 
-void Bus::setTimeArrive(string hours = "00", string minutes = "00")
+void Bus::setTimeArrive(std::string hours = "00", std::string minutes = "00")
 {
 	if (hours.length() == 1)
 	{
