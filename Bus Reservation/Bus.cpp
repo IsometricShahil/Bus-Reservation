@@ -2,7 +2,16 @@
 #include <iostream>
 #include <string>
 
-void Bus::setTimeDepart(std::string hours = "00", std::string minutes = "00")
+Bus(std::string drivername, std::string des = "", std::string from = ""):driverName(drivername), destination(des),
+from(from)
+{
+	for (int i = 0; i < 40; i++)
+	{
+		seats[i] = "Empty!";
+	}
+}
+
+void Bus::setTimeDepart(string hours = "00", string minutes = "00")
 {
 	if (hours.length() == 1)
 	{
@@ -15,7 +24,7 @@ void Bus::setTimeDepart(std::string hours = "00", std::string minutes = "00")
 	this->timeDepart = hours + ":" + minutes;
 }
 
-void Bus::setTimeArrive(std::string hours = "00", std::string minutes = "00")
+void Bus::setTimeArrive(string hours = "00", string minutes = "00")
 {
 	if (hours.length() == 1)
 	{
@@ -37,3 +46,25 @@ void Bus::printBusInfo()
 	std::cout << "Departure\t: " << this->timeDepart << "\n";
 }
 
+void printAvaliableSeats()
+{
+	bool nextLine = false;
+
+	for (int i = 0; i < 40; i++)
+	{
+		std::cout << (i + 1) << ". " << seats[i];
+
+		if (i % 2 == 0 && nextLine)
+		{
+			std::cout << std::endl;
+			continue;
+		}
+		if (i % 2 == 0 && !nextLine)
+		{
+			std::cout << "\t\t";
+			nextLine = true;
+			continue;
+		}
+
+		std::cout << "\t";
+	}
