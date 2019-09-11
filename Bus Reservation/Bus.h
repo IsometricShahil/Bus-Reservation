@@ -8,7 +8,7 @@ class Bus
 	std::string from;
 	std::string timeDepart;
 	std::string timeArrive;
-   std::string seats[40]; //5 blocks * 2 rows = 10 total blocks
+   std::string seats[40]; //(5sq * 2 row) = 10sq*4seats = 40 seats
 
 public:
 	Bus(std::string drivername, std::string des = "", std::string from = "")
